@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Euro Trip 2026 · Roteiro de Viagem</title>
+<meta name="description" content="Roteiro editorial: 10 dias entre Madrid, Barcelona, Valência, Ibiza e Lisboa. 12 a 21 de Setembro de 2026.">
+<meta name="theme-color" content="#1A1330">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Euro Trip 2026 · Roteiro de Viagem">
+<meta property="og:description" content="10 dias entre Madrid, Barcelona, Valência, Ibiza e Lisboa. Roteiro completo com hospedagens, atrações e orçamento.">
+<meta property="og:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada%20Familia%20(Barcelona).JPG?width=1200">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Euro Trip 2026">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Euro Trip 2026 · Roteiro de Viagem">
+<meta name="twitter:description" content="10 dias entre Madrid, Barcelona, Valência, Ibiza e Lisboa.">
+
+<!-- Favicon inline (sol estilizado em SVG) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231A1330'/><circle cx='32' cy='32' r='14' fill='%23FFB627'/><g stroke='%23FFB627' stroke-width='3' stroke-linecap='round'><line x1='32' y1='6' x2='32' y2='12'/><line x1='32' y1='52' x2='32' y2='58'/><line x1='6' y1='32' x2='12' y2='32'/><line x1='52' y1='32' x2='58' y2='32'/><line x1='13' y1='13' x2='17' y2='17'/><line x1='47' y1='47' x2='51' y2='51'/><line x1='13' y1='51' x2='17' y2='47'/><line x1='47' y1='17' x2='51' y2='13'/></g></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF6EC;
+    --ink: #1A1330;
+    --terra: #C84A36;
+    --terra-dark: #8B2E20;
+    --sea: #14687A;
+    --sea-light: #4FA8B8;
+    --gold: #C9941E;
+    --olive: #4A5D2C;
+    --rose: #D87A8A;
+    --rose-deep: #A6485A;
+    --sand: #ECD9B0;
+    --shadow: 0 30px 60px -20px rgba(26,19,48,.25), 0 18px 36px -18px rgba(26,19,48,.18);
+    --shadow-card: 0 20px 40px -18px rgba(26,19,48,.22);
+    --serif-display: 'Playfair Display', Georgia, serif;
+    --serif-body: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --bebas: 'Bebas Neue', Impact, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  img { display: block; max-width: 100%; }
+
+  /* === Helpers === */
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+  .num-frame {
+    font-family: var(--bebas);
+    letter-spacing: .03em;
+  }
+  .label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .28em;
+  }
+  .pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================ */
+  /* HERO / COVER                                                  */
+  /* ============================================================ */
+  .cover {
+    position: relative;
+    height: 100vh;
+    min-height: 720px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #f5e3c7 0%, #e8b894 35%, #c87856 70%, #7d3f3a 100%);
+  }
+  .cover-photo {
+    position: absolute;
+    inset: 0;
+    /* background-image setado via JS para Sagrada Família */
+    background-size: cover;
+    background-position: center 35%;
+    filter: saturate(1.15) contrast(1.05);
+  }
+  .cover-photo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(200,74,54,.55) 0%, rgba(20,104,122,.35) 50%, rgba(26,19,48,.65) 100%);
+    mix-blend-mode: multiply;
+  }
+  .cover-photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(26,19,48,.15) 0%, rgba(26,19,48,0) 25%, rgba(26,19,48,0) 55%, rgba(26,19,48,.9) 100%);
+  }
+
+  /* Floating issue ribbon */
+  .issue-ribbon {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex; gap: 28px; align-items: center;
+    color: rgba(255,255,255,.92);
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .issue-ribbon span:nth-child(2) {
+    width: 1px; height: 12px; background: rgba(255,255,255,.5);
+  }
+
+  .cover-content {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 80px 70px;
+    color: white;
+  }
+  .cover-eyebrow {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    color: rgba(255,255,255,.85);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .cover-eyebrow::after {
+    content: ''; flex: 1; max-width: 80px; height: 1px;
+    background: rgba(255,255,255,.6);
+  }
+  .cover-title {
+    font-family: var(--serif-display);
+    font-weight: 900;
+    font-size: clamp(80px, 13vw, 200px);
+    line-height: .82;
+    letter-spacing: -.04em;
+    margin-bottom: 32px;
+  }
+  .cover-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: #f5d295;
+  }
+  .cover-meta {
+    display: flex; gap: 60px; align-items: flex-end;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,.35);
+    max-width: 760px;
+  }
+  .cover-meta-item .lbl {
+    display: block;
+    font-size: 10px;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    opacity: .7;
+    margin-bottom: 8px;
+  }
+  .cover-meta-item .val {
+    font-family: var(--serif-display);
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .cities-strip {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 5;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 18px 60px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    font-family: var(--bebas);
+    font-size: 18px;
+    letter-spacing: .25em;
+    overflow: hidden;
+  }
+  .cities-strip span { white-space: nowrap; }
+  .cities-strip .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--terra);
+    align-self: center;
+    margin: 0 -20px;
+  }
+
+  /* ============================================================ */
+  /* DESTAQUES INDEX (mini sumário entre seções)                  */
+  /* ============================================================ */
+  .index {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 80px 0;
+  }
+  .index-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .index h2 {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1;
+  }
+  .index h2 strong { font-weight: 900; font-style: normal; display: block; color: var(--gold); }
+  .index-items { display: grid; gap: 22px; }
+  .index-item {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 28px;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(251,246,236,.15);
+    text-decoration: none;
+    color: var(--cream);
+    transition: padding-left .4s ease, border-color .4s ease;
+  }
+  .index-item:hover {
+    border-bottom-color: var(--gold);
+    padding-left: 12px;
+  }
+  .index-item:visited { color: var(--cream); }
+  .index-item em {
+    font-style: italic;
+    font-weight: 400;
+    opacity: .6;
+    font-family: var(--serif-display);
+    text-decoration: none;
+  }
+  .index-item .n {
+    font-family: var(--serif-display);
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+  }
+  .index-item .city {
+    font-family: var(--serif-display);
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .index-item .dates { font-size: 13px; opacity: .7; letter-spacing: .1em; }
+
+  /* ============================================================ */
+  /* CHAPTER (uma cidade)                                          */
+  /* ============================================================ */
+  .chapter {
+    padding: 120px 0 80px;
+    position: relative;
+  }
+  .chapter-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 50px;
+    align-items: end;
+    margin-bottom: 70px;
+  }
+  .chapter-num {
+    font-family: var(--serif-display);
+    font-weight: 900;
+    font-size: 220px;
+    line-height: .8;
+    letter-spacing: -.06em;
+    color: var(--terra);
+    -webkit-text-stroke: 0;
+  }
+  .chapter-meta { padding-bottom: 26px; }
+  .chapter-eyebrow {
+    font-size: 11px;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .chapter-title {
+    font-family: var(--serif-display);
+    font-weight: 900;
+    font-size: 96px;
+    line-height: .9;
+    letter-spacing: -.03em;
+    margin-bottom: 18px;
+  }
+  .chapter-dek {
+    font-family: var(--serif-body);
+    font-size: 24px;
+    line-height: 1.45;
+    color: rgba(26,19,48,.7);
+    font-style: italic;
+    max-width: 720px;
+  }
+
+  /* hero photo big */
+  .chapter-hero {
+    position: relative;
+    height: 540px;
+    overflow: hidden;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow);
+  }
+  .chapter-hero img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .chapter-hero .caption {
+    position: absolute;
+    bottom: 24px; left: 30px;
+    color: white;
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 16px;
+    background: rgba(0,0,0,.4);
+    padding: 8px 16px;
+    backdrop-filter: blur(8px);
+  }
+
+  /* main two-col layout */
+  .chapter-body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* itinerary list */
+  .itinerary { }
+  .itinerary h3 {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .iti-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 28px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(26,19,48,.12);
+    align-items: baseline;
+  }
+  .iti-date {
+    font-family: var(--bebas);
+    font-size: 38px;
+    color: var(--terra);
+    letter-spacing: .02em;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .iti-date .mes {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .25em;
+    color: rgba(26,19,48,.45);
+    margin-top: 4px;
+  }
+  .iti-title {
+    font-family: var(--serif-display);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+  .iti-title a {
+    color: inherit;
+    text-decoration: none;
+    background-image: linear-gradient(transparent calc(100% - 1px), currentColor 1px);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .4s ease;
+    padding-bottom: 1px;
+  }
+  .iti-title a:hover {
+    background-size: 100% 100%;
+    color: var(--terra);
+  }
+  .iti-title a::after {
+    content: ' ↗';
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(26,19,48,.35);
+    vertical-align: super;
+    margin-left: 2px;
+    transition: color .3s ease;
+  }
+  .iti-title a:hover::after { color: var(--terra); }
+
+  .side-card h4 a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color .3s ease;
+  }
+  .side-card h4 a:hover {
+    border-bottom-color: var(--terra);
+  }
+  .side-card h4 a::after {
+    content: ' ↗';
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--terra);
+    vertical-align: super;
+    margin-left: 4px;
+  }
+  .side-card ul li a {
+    color: var(--terra);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--terra);
+    transition: color .3s ease, border-color .3s ease;
+  }
+  .side-card ul li a:hover {
+    color: var(--terra-dark);
+    border-bottom-color: var(--terra-dark);
+  }
+
+  /* chapter-themed link colors */
+  #barcelona .iti-title a:hover,
+  #barcelona .iti-title a:hover::after,
+  #barcelona .side-card h4 a::after,
+  #barcelona .side-card ul li a { color: var(--sea); border-color: var(--sea); }
+  #barcelona .iti-title a:hover { color: var(--sea); }
+  #barcelona .side-card h4 a:hover { border-bottom-color: var(--sea); }
+
+  #ibiza .iti-title a:hover,
+  #ibiza .iti-title a:hover::after,
+  #ibiza .side-card h4 a::after,
+  #ibiza .side-card ul li a { color: var(--rose-deep); border-color: var(--rose-deep); }
+  #ibiza .iti-title a:hover { color: var(--rose-deep); }
+  #ibiza .side-card h4 a:hover { border-bottom-color: var(--rose-deep); }
+  .iti-title small {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(26,19,48,.55);
+    font-weight: 500;
+  }
+  .iti-price {
+    font-family: var(--bebas);
+    font-size: 22px;
+    color: var(--ink);
+    letter-spacing: .02em;
+  }
+  .iti-price.free { color: var(--olive); }
+
+  /* sidebar */
+  .sidebar { display: flex; flex-direction: column; gap: 30px; }
+  .side-card {
+    background: white;
+    padding: 32px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+  }
+  .side-card-img {
+    width: calc(100% + 64px);
+    margin: -32px -32px 24px;
+    height: 220px;
+    overflow: hidden;
+  }
+  .side-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .side-card h4 {
+    font-family: var(--serif-display);
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+  .side-card .eyebrow {
+    font-size: 10px;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .side-card p, .side-card li {
+    font-family: var(--serif-body);
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(26,19,48,.85);
+  }
+  .side-card ul { list-style: none; padding: 0; }
+  .side-card li { padding: 6px 0; border-bottom: 1px dotted rgba(26,19,48,.18); }
+  .side-card li:last-child { border-bottom: none; }
+  .price-row {
+    display: flex; justify-content: space-between;
+    padding: 8px 0;
+    font-family: var(--sans);
+    font-size: 14px;
+  }
+  .price-row strong { font-weight: 600; color: var(--terra); font-family: var(--bebas); font-size: 20px; letter-spacing: .02em; }
+
+  /* "warning" callout */
+  .callout {
+    background: var(--sand);
+    border-left: 4px solid var(--terra);
+    padding: 18px 24px;
+    margin-top: 30px;
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--terra-dark);
+  }
+  .callout strong {
+    font-style: normal;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* "highlights" mini gallery row */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 60px;
+  }
+  .gallery figure {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+  .gallery img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+  }
+  .gallery figure:hover img { transform: scale(1.06); }
+  .gallery figcaption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 24px 22px 22px;
+    color: white;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,.75));
+    font-family: var(--serif-display);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .gallery figcaption span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: .85;
+    margin-bottom: 4px;
+  }
+
+  /* ====== themed accents per chapter ======= */
+  #madrid .chapter-num,
+  #madrid .iti-date,
+  #madrid .chapter-eyebrow,
+  #madrid .side-card .eyebrow,
+  #madrid .price-row strong { color: var(--terra); }
+  #madrid .callout { border-color: var(--terra); background: #fce4d8; }
+
+  #barcelona .chapter-num,
+  #barcelona .iti-date,
+  #barcelona .chapter-eyebrow,
+  #barcelona .side-card .eyebrow,
+  #barcelona .price-row strong { color: var(--sea); }
+  #barcelona .callout { border-color: var(--sea); background: #dbeef2; color: #0a4a58;}
+
+  #ibiza .chapter-num,
+  #ibiza .iti-date,
+  #ibiza .chapter-eyebrow,
+  #ibiza .side-card .eyebrow,
+  #ibiza .price-row strong { color: var(--rose-deep); }
+  #ibiza .callout { border-color: var(--rose-deep); background: #fbe1e6; color: var(--rose-deep);}
+
+  /* divider between chapters */
+  .ornament {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--gold);
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: 24px;
+    letter-spacing: .3em;
+  }
+  .ornament::before, .ornament::after {
+    content: '— —';
+    margin: 0 18px;
+    color: rgba(201,148,30,.4);
+    letter-spacing: 0;
+  }
+
+  /* ============================================================ */
+  /* BUDGET                                                        */
+  /* ============================================================ */
+  .budget {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .budget::before {
+    content: '€';
+    position: absolute;
+    top: -80px; right: -50px;
+    font-family: var(--serif-display);
+    font-weight: 900;
+    font-size: 600px;
+    color: rgba(201,148,30,.08);
+    line-height: 1;
+  }
+  .budget-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .budget-eyebrow {
+    font-size: 11px;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .budget h2 {
+    font-family: var(--serif-display);
+    font-weight: 900;
+    font-size: 88px;
+    line-height: 1;
+    letter-spacing: -.03em;
+  }
+  .budget h2 em {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .budget-table {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .budget-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(251,246,236,.18);
+    align-items: baseline;
+  }
+  .budget-row.head {
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: rgba(251,246,236,.6);
+    padding-bottom: 18px;
+  }
+  .budget-row .cat {
+    font-family: var(--serif-display);
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .budget-row .val {
+    font-family: var(--bebas);
+    font-size: 30px;
+    text-align: right;
+    letter-spacing: .02em;
+  }
+  .budget-row.total {
+    background: var(--gold);
+    color: var(--ink);
+    padding: 26px 30px;
+    margin: 24px -30px 0;
+    border-bottom: none;
+  }
+  .budget-row.total .cat { font-weight: 700; font-size: 26px;}
+  .budget-row.total .val { font-size: 38px; font-weight: 600;}
+
+  .budget-notes {
+    max-width: 900px;
+    margin: 70px auto 0;
+    padding-top: 50px;
+    border-top: 1px solid rgba(251,246,236,.18);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .budget-note h5 {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .budget-note p {
+    font-family: var(--serif-body);
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(251,246,236,.85);
+  }
+
+  /* ============================================================ */
+  /* FOOTER                                                        */
+  /* ============================================================ */
+  .signoff {
+    padding: 140px 40px;
+    text-align: center;
+    background:
+      linear-gradient(180deg, rgba(251,246,236,.92), rgba(251,246,236,.92)),
+      var(--cream);
+    background-size: cover;
+    background-position: center;
+  }
+  .signoff h2 {
+    font-family: var(--serif-display);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(72px, 10vw, 140px);
+    line-height: .9;
+    margin-bottom: 24px;
+    color: var(--terra);
+  }
+  .signoff p {
+    font-family: var(--serif-body);
+    font-size: 24px;
+    font-style: italic;
+    color: rgba(26,19,48,.75);
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .signoff .stamp {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    transform: rotate(-2deg);
+    font-family: var(--bebas);
+    font-size: 18px;
+    letter-spacing: .3em;
+    color: var(--ink);
+  }
+
+  /* fade-in on scroll */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(.2,.6,.2,1), transform 1s cubic-bezier(.2,.6,.2,1);
+  }
+  .fade-up.in { opacity: 1; transform: translateY(0); }
+
+  /* small screens */
+  @media (max-width: 900px) {
+    .container { padding: 0 24px; }
+    .cover-content { padding: 40px 28px 70px; }
+    .cover-meta { flex-direction: column; gap: 24px; align-items: flex-start; }
+    .index-grid { grid-template-columns: 1fr; gap: 40px; }
+    .index h2 { font-size: 40px; }
+    .index-item { grid-template-columns: 40px 1fr; gap: 18px; }
+    .index-item .dates { grid-column: 2; }
+    .chapter { padding: 80px 0 40px; }
+    .chapter-header { grid-template-columns: 1fr; gap: 8px; }
+    .chapter-num { font-size: 120px; }
+    .chapter-title { font-size: 56px; }
+    .chapter-dek { font-size: 19px; }
+    .chapter-hero { height: 340px; margin-bottom: 50px; }
+    .chapter-body { grid-template-columns: 1fr; gap: 50px; }
+    .iti-item { grid-template-columns: 60px 1fr; }
+    .iti-price { grid-column: 2; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    .budget h2 { font-size: 48px; }
+    .budget-row { grid-template-columns: 1fr 1fr; padding: 14px 0; }
+    .budget-row.head .cat { grid-column: 1 / -1; }
+    .budget-row .cat { grid-column: 1 / -1; margin-bottom: 6px; font-size: 18px;}
+    .budget-row.total { margin: 24px 0 0; padding: 20px;}
+    .budget-notes { grid-template-columns: 1fr; }
+    .signoff { padding: 80px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- =========================================================== -->
+<!-- COVER                                                       -->
+<!-- =========================================================== -->
+<section class="cover">
+  <div class="cover-photo" data-wiki="Sagrada Família" data-bg="true"></div>
+  <div class="issue-ribbon">
+    <span>Edição Especial</span>
+    <span></span>
+    <span>Vol. 01 · Setembro 2026</span>
+  </div>
+  <div class="cover-content">
+    <div class="cover-eyebrow">Roteiro Editorial · Espanha &amp; Portugal</div>
+    <h1 class="cover-title">Euro<br><em>Trip</em></h1>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="lbl">Período</span>
+        <span class="val">12 a 21 de Setembro</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="lbl">Grupo</span>
+        <span class="val">5 viajantes</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="lbl">Rota</span>
+        <span class="val">Madrid → Barcelona → Valência → Ibiza → Lisboa</span>
+      </div>
+    </div>
+  </div>
+  <div class="cities-strip">
+    <span>MADRID</span><span class="dot"></span>
+    <span>BARCELONA</span><span class="dot"></span>
+    <span>VALÊNCIA</span><span class="dot"></span>
+    <span>IBIZA</span><span class="dot"></span>
+    <span>LISBOA</span>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+<!-- INDEX                                                       -->
+<!-- =========================================================== -->
+<section class="index">
+  <div class="container index-grid fade-up">
+    <h2>Nesta<br><strong>Edição</strong></h2>
+    <div class="index-items">
+      <a class="index-item" href="#madrid">
+        <span class="n">01</span>
+        <span class="city">Madrid <em style="opacity:.6;font-weight:400;font-style:italic">— a capital efervescente</em></span>
+        <span class="dates">12 — 14 SET</span>
+      </a>
+      <a class="index-item" href="#barcelona">
+        <span class="n">02</span>
+        <span class="city">Barcelona &amp; Valência <em style="opacity:.6;font-weight:400;font-style:italic">— modernismo &amp; ciência</em></span>
+        <span class="dates">14 — 17 SET</span>
+      </a>
+      <a class="index-item" href="#ibiza">
+        <span class="n">03</span>
+        <span class="city">Ibiza &amp; Lisboa <em style="opacity:.6;font-weight:400;font-style:italic">— sol, mar &amp; despedida</em></span>
+        <span class="dates">17 — 21 SET</span>
+      </a>
+      <a class="index-item" href="#budget">
+        <span class="n">04</span>
+        <span class="city">Resumo Financeiro <em style="opacity:.6;font-weight:400;font-style:italic">— planejamento &amp; notas</em></span>
+        <span class="dates">10 DIAS</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+<!-- 01 · MADRID                                                 -->
+<!-- =========================================================== -->
+<article class="chapter" id="madrid">
+  <div class="container">
+    <header class="chapter-header fade-up">
+      <div class="chapter-num">01</div>
+      <div class="chapter-meta">
+        <div class="chapter-eyebrow">Capítulo Um · 12 a 14 de Setembro</div>
+        <h2 class="chapter-title">Madrid</h2>
+        <p class="chapter-dek">A capital espanhola começa a jornada com palácios, museus e o vai-e-vem de seus mercados — três dias para entrar no ritmo ibérico.</p>
+      </div>
+    </header>
+
+    <figure class="chapter-hero fade-up">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Plaza Mayor, Madrid" alt="Plaza Mayor de Madrid" loading="lazy">
+      <figcaption class="caption">Plaza Mayor, o coração histórico de Madrid</figcaption>
+    </figure>
+
+    <div class="chapter-body fade-up">
+      <div class="itinerary">
+        <h3>O Roteiro</h3>
+        <div class="iti-item">
+          <div class="iti-date">12<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.mercadodesanmiguel.es" target="_blank" rel="noopener">Chegada &amp; jantar no Mercado de San Miguel</a><small>Noite · jantar à la carte</small></div>
+          </div>
+          <div class="iti-price free">livre</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">13<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.patrimonionacional.es/visita/palacio-real-de-madrid" target="_blank" rel="noopener">Palácio Real</a><small>10:30 — 13:00 · ingresso obrigatório</small></div>
+          </div>
+          <div class="iti-price">€ 18</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">13<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.museodelprado.es" target="_blank" rel="noopener">Museu do Prado</a><small>15:00 — 17:30 · grátis das 18h às 20h</small></div>
+          </div>
+          <div class="iti-price">€ 15</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">13<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.google.com/maps/search/?api=1&query=Parque%20del%20Retiro%20Madrid" target="_blank" rel="noopener">Parque do Retiro ao pôr do sol</a><small>Caminhada · barquinho no lago</small></div>
+          </div>
+          <div class="iti-price free">grátis</div>
+        </div>
+
+        <div class="callout">
+          <strong>Atenção · Palácio Real</strong>
+          Aos domingos o palácio fecha mais cedo — último acesso permitido às 15:00. Programe a visita pela manhã.
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="side-card">
+          <div class="side-card-img">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Gran Vía, Madrid" alt="Madrid Gran Vía" loading="lazy">
+          </div>
+          <div class="eyebrow">Hospedagem</div>
+          <h4><a href="https://www.booking.com/searchresults.html?ss=B%26B%20Hotel%20Madrid%20Centro%20Sol%20Madrid" target="_blank" rel="noopener">B&amp;B Hotel Madrid Centro Sol</a></h4>
+          <ul style="margin-top:14px">
+            <li><div class="price-row">Diária casal <strong>€ 140</strong></div></li>
+            <li><div class="price-row">Diária solteiro <strong>€ 125</strong></div></li>
+          </ul>
+          <p style="margin-top:14px;font-size:16px;color:rgba(26,19,48,.65)">Café da manhã incluído · banheiro privativo · localização central no Sol.</p>
+        </div>
+
+        <div class="side-card">
+          <div class="eyebrow">Reservas Oficiais</div>
+          <h4 style="font-size:20px">Compre antes de viajar</h4>
+          <ul style="margin-top:14px;font-size:16px">
+            <li>Palácio Real — <a href="https://www.patrimonionacional.es/visita/palacio-real-de-madrid" target="_blank" rel="noopener"><em>patrimonionacional.es</em></a></li>
+            <li>Museu do Prado — <a href="https://www.museodelprado.es" target="_blank" rel="noopener"><em>museodelprado.es</em></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Mini gallery -->
+    <div class="gallery fade-up">
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Royal Palace of Madrid" alt="Palácio Real de Madrid" loading="lazy">
+        <figcaption><span>Atração</span>Palácio Real</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Mercado de San Miguel" alt="Mercado de San Miguel" loading="lazy">
+        <figcaption><span>Gastronomia</span>Mercado de San Miguel</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Buen Retiro Park" alt="Parque do Retiro" loading="lazy">
+        <figcaption><span>Natureza</span>Parque do Retiro</figcaption>
+      </figure>
+    </div>
+  </div>
+</article>
+
+<div class="ornament">Madrid · Barcelona</div>
+
+<!-- =========================================================== -->
+<!-- 02 · BARCELONA & VALÊNCIA                                   -->
+<!-- =========================================================== -->
+<article class="chapter" id="barcelona">
+  <div class="container">
+    <header class="chapter-header fade-up">
+      <div class="chapter-num">02</div>
+      <div class="chapter-meta">
+        <div class="chapter-eyebrow">Capítulo Dois · 14 a 17 de Setembro</div>
+        <h2 class="chapter-title">Barcelona<br>&amp; Valência</h2>
+        <p class="chapter-dek">Do gênio modernista de Gaudí às curvas futuristas de Calatrava, três dias atravessando o Mediterrâneo catalão até a cidade do arroz.</p>
+      </div>
+    </header>
+
+    <figure class="chapter-hero fade-up">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Sagrada Família" alt="Sagrada Família" loading="lazy">
+      <figcaption class="caption">Sagrada Família — obra-prima inacabada de Antoni Gaudí</figcaption>
+    </figure>
+
+    <div class="chapter-body fade-up">
+      <div class="itinerary">
+        <h3>O Roteiro</h3>
+        <div class="iti-item">
+          <div class="iti-date">14<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.renfe.com" target="_blank" rel="noopener">Trem AVE Madrid → Barcelona</a><small>15:00 — 17:00 · 2h de viagem</small></div>
+          </div>
+          <div class="iti-price">€ 34</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">15<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://parkguell.barcelona" target="_blank" rel="noopener">Park Güell</a><small>10:00 — 12:00 · zona monumental</small></div>
+          </div>
+          <div class="iti-price">€ 18</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">16<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.google.com/maps/search/?api=1&query=Amfiteatre%20Roma%20Tarragona" target="_blank" rel="noopener">Viagem a Valência com parada em Tarragona</a><small>13:00 — 14:00 · anfiteatro romano à beira-mar</small></div>
+          </div>
+          <div class="iti-price">€ 5</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">17<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.cac.es" target="_blank" rel="noopener">Cidade das Artes e das Ciências</a><small>10:00 — 13:00 · combo Oceanogràfic + Hemisfèric</small></div>
+          </div>
+          <div class="iti-price">€ 45</div>
+        </div>
+
+        <div class="callout">
+          <strong>Dica · Sagrada Família</strong>
+          Reserve com 2 a 3 semanas de antecedência — os horários esgotam rapidamente, especialmente o acesso às torres.
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="side-card">
+          <div class="side-card-img">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Park Güell" alt="Park Güell" loading="lazy">
+          </div>
+          <div class="eyebrow">Barcelona</div>
+          <h4><a href="https://www.booking.com/searchresults.html?ss=Motel%20One%20Ciutadella%20Barcelona" target="_blank" rel="noopener">Motel One Ciutadella</a></h4>
+          <ul style="margin-top:14px">
+            <li><div class="price-row">Diária casal <strong>€ 160</strong></div></li>
+            <li><div class="price-row">Diária solteiro <strong>€ 145</strong></div></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <div class="side-card-img">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="City of Arts and Sciences" alt="Cidade das Artes e Ciências" loading="lazy">
+          </div>
+          <div class="eyebrow">Valência</div>
+          <h4><a href="https://www.booking.com/searchresults.html?ss=Venecia%20Plaza%20Centro%20Valencia" target="_blank" rel="noopener">Venecia Plaza Centro</a></h4>
+          <ul style="margin-top:14px">
+            <li><div class="price-row">Diária casal <strong>€ 110</strong></div></li>
+            <li><div class="price-row">Diária solteiro <strong>€ 100</strong></div></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <div class="eyebrow">Reservas Oficiais</div>
+          <ul style="margin-top:14px;font-size:16px">
+            <li>Sagrada Família — <a href="https://sagradafamilia.org" target="_blank" rel="noopener"><em>sagradafamilia.org</em></a></li>
+            <li>Park Güell — <a href="https://parkguell.barcelona" target="_blank" rel="noopener"><em>parkguell.barcelona</em></a></li>
+            <li>CAC Valência — <a href="https://www.cac.es" target="_blank" rel="noopener"><em>cac.es</em></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="gallery fade-up">
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Casa Batlló" alt="Casa Batlló" loading="lazy">
+        <figcaption><span>Modernismo</span>Casa Batlló · Gaudí</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Tarragona Amphitheatre" alt="Anfiteatro de Tarragona" loading="lazy">
+        <figcaption><span>Parada</span>Tarragona · Anfiteatro Romano</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="L'Hemisfèric" alt="Hemisfèric" loading="lazy">
+        <figcaption><span>Arquitetura</span>L'Hemisfèric · Calatrava</figcaption>
+      </figure>
+    </div>
+  </div>
+</article>
+
+<div class="ornament">Mediterrâneo · Baleares</div>
+
+<!-- =========================================================== -->
+<!-- 03 · IBIZA & LISBOA                                          -->
+<!-- =========================================================== -->
+<article class="chapter" id="ibiza">
+  <div class="container">
+    <header class="chapter-header fade-up">
+      <div class="chapter-num">03</div>
+      <div class="chapter-meta">
+        <div class="chapter-eyebrow">Capítulo Três · 17 a 21 de Setembro</div>
+        <h2 class="chapter-title">Ibiza<br>&amp; Lisboa</h2>
+        <p class="chapter-dek">A reta final descansa o corpo nas calas da ilha branca, acelera nas pistas de Pacha e Ushuaïa, e termina com uma noite em Lisboa.</p>
+      </div>
+    </header>
+
+    <figure class="chapter-hero fade-up">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Dalt Vila" alt="Dalt Vila, Ibiza" loading="lazy">
+      <figcaption class="caption">Dalt Vila, cidade alta de Ibiza — Patrimônio Mundial UNESCO</figcaption>
+    </figure>
+
+    <div class="chapter-body fade-up">
+      <div class="itinerary">
+        <h3>O Roteiro</h3>
+        <div class="iti-item">
+          <div class="iti-date">17<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.google.com/maps/search/?api=1&query=Dalt%20Vila%20Ibiza" target="_blank" rel="noopener">Chegada &amp; pôr do sol em Dalt Vila</a><small>Suba pelas muralhas até o Baluard de Santa Llúcia</small></div>
+          </div>
+          <div class="iti-price free">livre</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">18<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.google.com/maps/search/?api=1&query=Cala%20Comte%20Ibiza" target="_blank" rel="noopener">Praias de Cala Comte ou Cala Salada</a><small>Chegue antes das 11h para garantir lugar</small></div>
+          </div>
+          <div class="iti-price free">livre</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">19<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Mambo%20Ibiza" target="_blank" rel="noopener">Beach Clubs · barco · superclubes</a><small>Café Mambo ao sunset · Pacha ou Ushuaïa à noite</small></div>
+          </div>
+          <div class="iti-price">€ 60+</div>
+        </div>
+
+        <div class="iti-item">
+          <div class="iti-date">20<span class="mes">SET</span></div>
+          <div>
+            <div class="iti-title"><a href="https://www.google.com/maps/search/?api=1&query=Ibiza%20Airport%20IBZ" target="_blank" rel="noopener">Voo para Lisboa · pernoite estratégica</a><small>Aeroporto de Ibiza · chegue 90 min antes</small></div>
+          </div>
+          <div class="iti-price free">—</div>
+        </div>
+
+        <div class="callout">
+          <strong>Dica · Beach Clubs</strong>
+          Reserve dia, hora e mesa — sunset no Café Mambo ou Café del Mar é tradição. Entradas dos superclubes a partir de € 60, compre online com antecedência.
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="side-card">
+          <div class="side-card-img">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Cala Comte" alt="Cala Comte" loading="lazy">
+          </div>
+          <div class="eyebrow">Ibiza</div>
+          <h4><a href="https://www.booking.com/searchresults.html?ss=Hotel%20Nautico%20Ebeso%20Ibiza" target="_blank" rel="noopener">Hotel Náutico Ebeso</a></h4>
+          <ul style="margin-top:14px">
+            <li><div class="price-row">Diária casal <strong>€ 220</strong></div></li>
+            <li><div class="price-row">Diária solteiro <strong>€ 190</strong></div></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <div class="side-card-img">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Avenida da Liberdade" alt="Avenida da Liberdade, Lisboa" loading="lazy">
+          </div>
+          <div class="eyebrow">Lisboa · última noite</div>
+          <h4><a href="https://www.booking.com/searchresults.html?ss=Ibis%20Styles%20Lisboa%20Centro%20Liberdade%20Lisboa" target="_blank" rel="noopener">Ibis Styles Centro Liberdade</a></h4>
+          <ul style="margin-top:14px">
+            <li><div class="price-row">Diária casal <strong>€ 135</strong></div></li>
+            <li><div class="price-row">Diária solteiro <strong>€ 120</strong></div></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="gallery fade-up">
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Cala Comte" alt="Cala Comte" loading="lazy">
+        <figcaption><span>Praia</span>Cala Comte</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Dalt Vila" alt="Dalt Vila Ibiza" loading="lazy">
+        <figcaption><span>História</span>Dalt Vila · Pôr do sol</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Avenida da Liberdade" alt="Avenida da Liberdade" loading="lazy">
+        <figcaption><span>Lisboa</span>Avenida da Liberdade</figcaption>
+      </figure>
+    </div>
+  </div>
+</article>
+
+<!-- =========================================================== -->
+<!-- 04 · BUDGET                                                  -->
+<!-- =========================================================== -->
+<section class="budget" id="budget">
+  <div class="container">
+    <div class="budget-header fade-up">
+      <div class="budget-eyebrow">Capítulo Quatro · Custos &amp; planejamento</div>
+      <h2>Resumo<br><em>Financeiro</em></h2>
+    </div>
+
+    <div class="budget-table fade-up">
+      <div class="budget-row head">
+        <div class="cat">Categoria</div>
+        <div class="val">Em casal · p/ pessoa</div>
+        <div class="val">Solteiro · total</div>
+      </div>
+      <div class="budget-row">
+        <div class="cat">Hospedagem · 9 noites</div>
+        <div class="val">€ 760</div>
+        <div class="val">€ 1.345</div>
+      </div>
+      <div class="budget-row">
+        <div class="cat">Alimentação · 10 dias</div>
+        <div class="val">€ 650</div>
+        <div class="val">€ 650</div>
+      </div>
+      <div class="budget-row">
+        <div class="cat">Transportes</div>
+        <div class="val">€ 345</div>
+        <div class="val">€ 345</div>
+      </div>
+      <div class="budget-row">
+        <div class="cat">Ingressos &amp; atrações</div>
+        <div class="val">€ 75</div>
+        <div class="val">€ 75</div>
+      </div>
+      <div class="budget-row total">
+        <div class="cat">Total estimado</div>
+        <div class="val">€ 1.830</div>
+        <div class="val">€ 2.415</div>
+      </div>
+    </div>
+
+    <div class="budget-notes fade-up">
+      <div class="budget-note">
+        <h5>Horários</h5>
+        <p>Definidos para evitar filas e respeitar fechamentos antecipados, especialmente aos domingos.</p>
+      </div>
+      <div class="budget-note">
+        <h5>Ingressos</h5>
+        <p>Devem ser comprados com antecedência nos sites oficiais de cada atração para garantir disponibilidade.</p>
+      </div>
+      <div class="budget-note">
+        <h5>Hotéis</h5>
+        <p>Todos os hotéis listados possuem banheiro privativo e café da manhã incluído.</p>
+      </div>
+      <div class="budget-note">
+        <h5>Câmbio</h5>
+        <p>Valores em euros (€). Sujeitos a variação até a data da viagem — reserve uma folga de 10–15% no orçamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+<!-- SIGN-OFF                                                     -->
+<!-- =========================================================== -->
+<section class="signoff fade-up">
+  <h2>Boa viagem.</h2>
+  <p>Que cada cidade entre como uma página nova — e que vocês voltem com mais histórias do que fotos.</p>
+  <span class="stamp">EuroTrip · Setembro 2026</span>
+</section>
+
+<script>
+  // Fade-up on scroll using IntersectionObserver
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+</script>
+
+
+<script>
+// Carregador de imagens da Wikipedia
+// Usa MediaWiki Action API com origin=* (permite CORS de qualquer origem, inclusive file://)
+(function () {
+  const apiURL = (lang, title) =>
+    `https://${lang}.wikipedia.org/w/api.php` +
+    `?action=query&prop=pageimages&format=json` +
+    `&piprop=original|thumbnail&pithumbsize=1600` +
+    `&redirects=1&origin=*` +
+    `&titles=${encodeURIComponent(title)}`;
+
+  async function fetchImageFromWiki(title) {
+    for (const lang of ['pt', 'en']) {
+      try {
+        const r = await fetch(apiURL(lang, title));
+        if (!r.ok) continue;
+        const data = await r.json();
+        const pages = data.query && data.query.pages;
+        if (!pages) continue;
+        for (const id in pages) {
+          const p = pages[id];
+          const img = (p.original && p.original.source) ||
+                      (p.thumbnail && p.thumbnail.source);
+          if (img) return img;
+        }
+      } catch (e) { /* tenta próximo idioma */ }
+    }
+    return null;
+  }
+
+  function applyImage(el, src) {
+    if (!src) return;
+    if (el.tagName === 'IMG') {
+      el.style.opacity = '0';
+      el.style.transition = 'opacity .8s ease';
+      el.onload = () => { el.style.opacity = '1'; };
+      el.src = src;
+    } else if (el.dataset.bg === 'true') {
+      // pré-carrega para evitar flash
+      const probe = new Image();
+      probe.onload = () => {
+        el.style.transition = 'background-image .8s ease';
+        el.style.backgroundImage = `url('${src}')`;
+      };
+      probe.src = src;
+    }
+  }
+
+  document.querySelectorAll('[data-wiki]').forEach(async (el) => {
+    const title = el.getAttribute('data-wiki');
+    const src = await fetchImageFromWiki(title);
+    if (src) applyImage(el, src);
+  });
+})();
+</script>
+
+</body>
+</html>
