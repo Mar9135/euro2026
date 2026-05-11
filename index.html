@@ -799,29 +799,111 @@
   /* small screens */
   @media (max-width: 900px) {
     .container { padding: 0 24px; }
-    .cover-content { padding: 40px 28px 70px; }
-    .cover-meta { flex-direction: column; gap: 24px; align-items: flex-start; }
+    .cover-content { padding: 40px 28px 90px; }
+    .cover-title { font-size: clamp(64px, 18vw, 110px); }
+    .cover-meta { flex-direction: column; gap: 22px; align-items: flex-start; }
     .index-grid { grid-template-columns: 1fr; gap: 40px; }
     .index h2 { font-size: 40px; }
     .index-item { grid-template-columns: 40px 1fr; gap: 18px; }
     .index-item .dates { grid-column: 2; }
     .chapter { padding: 80px 0 40px; }
-    .chapter-header { grid-template-columns: 1fr; gap: 8px; }
-    .chapter-num { font-size: 120px; }
+    .chapter-header {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .chapter-num {
+      font-size: 120px;
+      line-height: .85;
+      margin-bottom: 8px;
+    }
     .chapter-title { font-size: 56px; }
     .chapter-dek { font-size: 19px; }
     .chapter-hero { height: 340px; margin-bottom: 50px; }
     .chapter-body { grid-template-columns: 1fr; gap: 50px; }
-    .iti-item { grid-template-columns: 60px 1fr; }
-    .iti-price { grid-column: 2; }
+    .iti-item { grid-template-columns: 60px 1fr; padding: 18px 0; }
+    .iti-price { grid-column: 2; margin-top: 4px; }
+    .iti-title { font-size: 20px; }
     .gallery { grid-template-columns: 1fr 1fr; }
     .budget h2 { font-size: 48px; }
-    .budget-row { grid-template-columns: 1fr 1fr; padding: 14px 0; }
-    .budget-row.head .cat { grid-column: 1 / -1; }
-    .budget-row .cat { grid-column: 1 / -1; margin-bottom: 6px; font-size: 18px;}
-    .budget-row.total { margin: 24px 0 0; padding: 20px;}
-    .budget-notes { grid-template-columns: 1fr; }
     .signoff { padding: 80px 24px; }
+
+    /* Faixa de cidades: scroll horizontal suave no mobile */
+    .cities-strip {
+      padding: 14px 24px;
+      gap: 22px;
+      font-size: 14px;
+      letter-spacing: .2em;
+      overflow-x: auto;
+      justify-content: flex-start;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .cities-strip::-webkit-scrollbar { display: none; }
+    .cities-strip span { flex-shrink: 0; }
+    .cities-strip .dot { margin: 0 0; }
+
+    /* Tabela do orçamento — cabeçalho compacto */
+    .budget-row {
+      grid-template-columns: 1fr 1fr;
+      padding: 16px 0;
+      column-gap: 12px;
+    }
+    .budget-row.head { padding-bottom: 14px; }
+    .budget-row.head .cat { grid-column: 1 / -1; margin-bottom: 8px; }
+    .budget-row .cat {
+      grid-column: 1 / -1;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    .budget-row .val {
+      font-size: 24px;
+      text-align: left;
+      position: relative;
+      padding-top: 16px;
+    }
+    .budget-row .val::before {
+      content: attr(data-label);
+      position: absolute;
+      top: 0; left: 0;
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .25em;
+      color: var(--gold);
+      opacity: .9;
+    }
+    .budget-row.head .val { display: none; }
+    .budget-row.total { margin: 24px 0 0; padding: 20px; }
+    .budget-row.total .cat { font-size: 22px; margin-bottom: 12px; }
+    .budget-row.total .val { font-size: 28px; padding-top: 14px; }
+    .budget-row.total .val::before { color: rgba(26,19,48,.6); }
+    .budget-notes { grid-template-columns: 1fr; }
+
+    /* Hover não funciona bem em touch: estilos clicáveis sempre visíveis */
+    .iti-title a {
+      background-size: 100% 100%;
+      color: var(--terra);
+    }
+    #barcelona .iti-title a { color: var(--sea); }
+    #ibiza .iti-title a { color: var(--rose-deep); }
+  }
+
+  /* Celulares menores (iPhone SE, etc) */
+  @media (max-width: 480px) {
+    .chapter-num { font-size: 96px; line-height: .85; }
+    .chapter-title { font-size: 44px; }
+    .cover-title { font-size: clamp(56px, 16vw, 90px); }
+    .chapter-hero { height: 240px; }
+    .chapter-hero .caption { font-size: 13px; padding: 6px 12px; left: 16px; bottom: 16px; }
+    .side-card { padding: 24px; }
+    .side-card-img { margin: -24px -24px 18px; height: 160px; }
+    .side-card h4 { font-size: 22px; }
+    .iti-title { font-size: 18px; }
+    .iti-date { font-size: 32px; }
+    .gallery { grid-template-columns: 1fr; }
+    .ornament { font-size: 18px; padding: 30px 0; }
+    .ornament::before, .ornament::after { margin: 0 10px; }
   }
 </style>
 </head>
@@ -831,7 +913,7 @@
 <!-- COVER                                                       -->
 <!-- =========================================================== -->
 <section class="cover">
-  <div class="cover-photo" data-wiki="Sagrada Família" data-bg="true"></div>
+  <div class="cover-photo" data-wiki="Sagrada Família" data-bg="true" style="background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada%20Familia%2001.jpg?width=1600');"></div>
   <div class="issue-ribbon">
     <span>Edição Especial</span>
     <span></span>
@@ -910,7 +992,7 @@
     </header>
 
     <figure class="chapter-hero fade-up">
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Plaza Mayor, Madrid" alt="Plaza Mayor de Madrid" loading="lazy">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaza%20Mayor%20de%20Madrid%2006.jpg?width=1280" data-wiki="Plaza Mayor, Madrid" alt="Plaza Mayor de Madrid" loading="lazy">
       <figcaption class="caption">Plaza Mayor, o coração histórico de Madrid</figcaption>
     </figure>
 
@@ -958,7 +1040,7 @@
       <aside class="sidebar">
         <div class="side-card">
           <div class="side-card-img">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Gran Vía, Madrid" alt="Madrid Gran Vía" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Via%20Madrid.jpg?width=1280" data-wiki="Gran Vía, Madrid" alt="Madrid Gran Vía" loading="lazy">
           </div>
           <div class="eyebrow">Hospedagem</div>
           <h4><a href="https://www.booking.com/searchresults.html?ss=B%26B%20Hotel%20Madrid%20Centro%20Sol%20Madrid" target="_blank" rel="noopener">B&amp;B Hotel Madrid Centro Sol</a></h4>
@@ -983,15 +1065,15 @@
     <!-- Mini gallery -->
     <div class="gallery fade-up">
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Royal Palace of Madrid" alt="Palácio Real de Madrid" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Palacio%20Real%20de%20Madrid%2003.jpg?width=1280" data-wiki="Royal Palace of Madrid" alt="Palácio Real de Madrid" loading="lazy">
         <figcaption><span>Atração</span>Palácio Real</figcaption>
       </figure>
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Mercado de San Miguel" alt="Mercado de San Miguel" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20de%20San%20Miguel%20%28Madrid%29%2003.jpg?width=1280" data-wiki="Mercado de San Miguel" alt="Mercado de San Miguel" loading="lazy">
         <figcaption><span>Gastronomia</span>Mercado de San Miguel</figcaption>
       </figure>
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Buen Retiro Park" alt="Parque do Retiro" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Madrid%20-%20Parque%20del%20Retiro%2002.jpg?width=1280" data-wiki="Buen Retiro Park" alt="Parque do Retiro" loading="lazy">
         <figcaption><span>Natureza</span>Parque do Retiro</figcaption>
       </figure>
     </div>
@@ -1015,7 +1097,7 @@
     </header>
 
     <figure class="chapter-hero fade-up">
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Sagrada Família" alt="Sagrada Família" loading="lazy">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada%20Familia%2001.jpg?width=1280" data-wiki="Sagrada Família" alt="Sagrada Família" loading="lazy">
       <figcaption class="caption">Sagrada Família — obra-prima inacabada de Antoni Gaudí</figcaption>
     </figure>
 
@@ -1063,7 +1145,7 @@
       <aside class="sidebar">
         <div class="side-card">
           <div class="side-card-img">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Park Güell" alt="Park Güell" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Park%20G%C3%BCell%20-%20Barcelona%2C%20Spain%20-%20Jan%202007.jpg?width=1280" data-wiki="Park Güell" alt="Park Güell" loading="lazy">
           </div>
           <div class="eyebrow">Barcelona</div>
           <h4><a href="https://www.booking.com/searchresults.html?ss=Motel%20One%20Ciutadella%20Barcelona" target="_blank" rel="noopener">Motel One Ciutadella</a></h4>
@@ -1075,7 +1157,7 @@
 
         <div class="side-card">
           <div class="side-card-img">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="City of Arts and Sciences" alt="Cidade das Artes e Ciências" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hemisferic%20Valencia%202018.jpg?width=1280" data-wiki="City of Arts and Sciences" alt="Cidade das Artes e Ciências" loading="lazy">
           </div>
           <div class="eyebrow">Valência</div>
           <h4><a href="https://www.booking.com/searchresults.html?ss=Venecia%20Plaza%20Centro%20Valencia" target="_blank" rel="noopener">Venecia Plaza Centro</a></h4>
@@ -1098,15 +1180,15 @@
 
     <div class="gallery fade-up">
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Casa Batlló" alt="Casa Batlló" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Casa%20Batll%C3%B3%20-%20Barcelona%2C%20Spain%20-%20Jan%202007.jpg?width=1280" data-wiki="Casa Batlló" alt="Casa Batlló" loading="lazy">
         <figcaption><span>Modernismo</span>Casa Batlló · Gaudí</figcaption>
       </figure>
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Tarragona Amphitheatre" alt="Anfiteatro de Tarragona" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tarragona%20Amfiteatre.jpg?width=1280" data-wiki="Tarragona Amphitheatre" alt="Anfiteatro de Tarragona" loading="lazy">
         <figcaption><span>Parada</span>Tarragona · Anfiteatro Romano</figcaption>
       </figure>
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="L'Hemisfèric" alt="Hemisfèric" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hemisferic%20Valencia%202018.jpg?width=1280" data-wiki="L'Hemisfèric" alt="Hemisfèric" loading="lazy">
         <figcaption><span>Arquitetura</span>L'Hemisfèric · Calatrava</figcaption>
       </figure>
     </div>
@@ -1130,7 +1212,7 @@
     </header>
 
     <figure class="chapter-hero fade-up">
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Dalt Vila" alt="Dalt Vila, Ibiza" loading="lazy">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eivissa%20-%20Dalt%20Vila.jpg?width=1280" data-wiki="Dalt Vila" alt="Dalt Vila, Ibiza" loading="lazy">
       <figcaption class="caption">Dalt Vila, cidade alta de Ibiza — Patrimônio Mundial UNESCO</figcaption>
     </figure>
 
@@ -1178,7 +1260,7 @@
       <aside class="sidebar">
         <div class="side-card">
           <div class="side-card-img">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Cala Comte" alt="Cala Comte" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Comte%2C%20Ibiza.jpg?width=1280" data-wiki="Cala Comte" alt="Cala Comte" loading="lazy">
           </div>
           <div class="eyebrow">Ibiza</div>
           <h4><a href="https://www.booking.com/searchresults.html?ss=Hotel%20Nautico%20Ebeso%20Ibiza" target="_blank" rel="noopener">Hotel Náutico Ebeso</a></h4>
@@ -1190,7 +1272,7 @@
 
         <div class="side-card">
           <div class="side-card-img">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Avenida da Liberdade" alt="Avenida da Liberdade, Lisboa" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Avenida%20da%20Liberdade%20%28Lisbon%2C%20Portugal%29%20-%20panoramio.jpg?width=1280" data-wiki="Avenida da Liberdade" alt="Avenida da Liberdade, Lisboa" loading="lazy">
           </div>
           <div class="eyebrow">Lisboa · última noite</div>
           <h4><a href="https://www.booking.com/searchresults.html?ss=Ibis%20Styles%20Lisboa%20Centro%20Liberdade%20Lisboa" target="_blank" rel="noopener">Ibis Styles Centro Liberdade</a></h4>
@@ -1204,15 +1286,15 @@
 
     <div class="gallery fade-up">
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Cala Comte" alt="Cala Comte" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Comte%2C%20Ibiza.jpg?width=1280" data-wiki="Cala Comte" alt="Cala Comte" loading="lazy">
         <figcaption><span>Praia</span>Cala Comte</figcaption>
       </figure>
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Dalt Vila" alt="Dalt Vila Ibiza" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eivissa%20-%20Dalt%20Vila.jpg?width=1280" data-wiki="Dalt Vila" alt="Dalt Vila Ibiza" loading="lazy">
         <figcaption><span>História</span>Dalt Vila · Pôr do sol</figcaption>
       </figure>
       <figure>
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23f5e3c7'/><stop offset='0.5' stop-color='%23e8b894'/><stop offset='1' stop-color='%23c87856'/></linearGradient></defs><rect width='40' height='30' fill='url(%23g)'/><circle cx='30' cy='10' r='4' fill='%23ffb84f' opacity='0.85'/></svg>" data-wiki="Avenida da Liberdade" alt="Avenida da Liberdade" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Avenida%20da%20Liberdade%20%28Lisbon%2C%20Portugal%29%20-%20panoramio.jpg?width=1280" data-wiki="Avenida da Liberdade" alt="Avenida da Liberdade" loading="lazy">
         <figcaption><span>Lisboa</span>Avenida da Liberdade</figcaption>
       </figure>
     </div>
@@ -1237,28 +1319,28 @@
       </div>
       <div class="budget-row">
         <div class="cat">Hospedagem · 9 noites</div>
-        <div class="val">€ 760</div>
-        <div class="val">€ 1.345</div>
+        <div class="val" data-label="CASAL / PESSOA">€ 760</div>
+        <div class="val" data-label="SOLTEIRO / TOTAL">€ 1.345</div>
       </div>
       <div class="budget-row">
         <div class="cat">Alimentação · 10 dias</div>
-        <div class="val">€ 650</div>
-        <div class="val">€ 650</div>
+        <div class="val" data-label="CASAL / PESSOA">€ 650</div>
+        <div class="val" data-label="SOLTEIRO / TOTAL">€ 650</div>
       </div>
       <div class="budget-row">
         <div class="cat">Transportes</div>
-        <div class="val">€ 345</div>
-        <div class="val">€ 345</div>
+        <div class="val" data-label="CASAL / PESSOA">€ 345</div>
+        <div class="val" data-label="SOLTEIRO / TOTAL">€ 345</div>
       </div>
       <div class="budget-row">
         <div class="cat">Ingressos &amp; atrações</div>
-        <div class="val">€ 75</div>
-        <div class="val">€ 75</div>
+        <div class="val" data-label="CASAL / PESSOA">€ 75</div>
+        <div class="val" data-label="SOLTEIRO / TOTAL">€ 75</div>
       </div>
       <div class="budget-row total">
         <div class="cat">Total estimado</div>
-        <div class="val">€ 1.830</div>
-        <div class="val">€ 2.415</div>
+        <div class="val" data-label="CASAL / PESSOA">€ 1.830</div>
+        <div class="val" data-label="SOLTEIRO / TOTAL">€ 2.415</div>
       </div>
     </div>
 
@@ -1307,8 +1389,8 @@
 
 
 <script>
-// Carregador de imagens da Wikipedia
-// Usa MediaWiki Action API com origin=* (permite CORS de qualquer origem, inclusive file://)
+// Fallback: se a imagem do Wikimedia Commons (Special:FilePath) falhar,
+// busca uma imagem alternativa via MediaWiki API.
 (function () {
   const apiURL = (lang, title) =>
     `https://${lang}.wikipedia.org/w/api.php` +
@@ -1336,29 +1418,34 @@
     return null;
   }
 
-  function applyImage(el, src) {
-    if (!src) return;
-    if (el.tagName === 'IMG') {
-      el.style.opacity = '0';
-      el.style.transition = 'opacity .8s ease';
-      el.onload = () => { el.style.opacity = '1'; };
-      el.src = src;
-    } else if (el.dataset.bg === 'true') {
-      // pré-carrega para evitar flash
+  // Liga onerror em todas as <img data-wiki>: se falhar, tenta API
+  document.querySelectorAll('img[data-wiki]').forEach((img) => {
+    let triedFallback = false;
+    img.addEventListener('error', async () => {
+      if (triedFallback) return;
+      triedFallback = true;
+      const title = img.getAttribute('data-wiki');
+      const src = await fetchImageFromWiki(title);
+      if (src) img.src = src;
+    });
+  });
+
+  // Para o background da capa, tenta carregar a imagem inicial; se falhar, busca via API
+  const coverBg = document.querySelector('.cover-photo[data-wiki][data-bg="true"]');
+  if (coverBg) {
+    // Testar se a URL de background está acessível
+    const currentBg = coverBg.style.backgroundImage;
+    const match = currentBg.match(/url\(['"]?(.+?)['"]?\)/);
+    if (match) {
       const probe = new Image();
-      probe.onload = () => {
-        el.style.transition = 'background-image .8s ease';
-        el.style.backgroundImage = `url('${src}')`;
+      probe.onerror = async () => {
+        const title = coverBg.getAttribute('data-wiki');
+        const src = await fetchImageFromWiki(title);
+        if (src) coverBg.style.backgroundImage = `url('${src}')`;
       };
-      probe.src = src;
+      probe.src = match[1];
     }
   }
-
-  document.querySelectorAll('[data-wiki]').forEach(async (el) => {
-    const title = el.getAttribute('data-wiki');
-    const src = await fetchImageFromWiki(title);
-    if (src) applyImage(el, src);
-  });
 })();
 </script>
 
